@@ -22,6 +22,7 @@ import {
   Montserrat_800ExtraBold_Italic,
   Montserrat_900Black_Italic,
 } from "@expo-google-fonts/montserrat";
+import AppText from "./app/components/AppText";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -50,7 +51,7 @@ export default function App() {
   } else {
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
+        <AppText>Open up App.js to start working on your app!</AppText>
         <StatusBar style="auto" />
       </View>
     );

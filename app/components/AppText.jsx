@@ -1,14 +1,22 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 
-const AppText = () => {
+import { COLORS, FONTS } from "../utils/theme";
+
+const AppText = ({ children, style }) => {
   return (
     <View>
-      <Text>AppText</Text>
+      <Text style={[styles.text, style]}>{children}</Text>
     </View>
   );
 };
 
 export default AppText;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  text: {
+    color: COLORS.primary,
+    ...FONTS.body3,
+    textTransform: "capitalize",
+  },
+});
